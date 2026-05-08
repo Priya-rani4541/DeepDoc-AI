@@ -1,93 +1,141 @@
 import { useState, useRef, useEffect } from "react";
-import axios from "axios";
 import { motion } from "framer-motion";
-
-const DEMO_MODE = true;
+import { askQuestion } from "../services/api";
 
 // 🔥 Highlight keywords
 const highlightText = (text) => {
+  if (!text) return "";
+
   return text.replace(
-    /(interest|loan|RBI)/gi,
+    /(interest|loan|RBI|SEBI|compliance)/gi,
     "<mark class='bg-yellow-300 text-black px-1 rounded'>$1</mark>"
   );
 };
 
 export default function Chat() {
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState([
+    {
+      role: "bot",
+      text: "👋 Welcome to DeepDoc AI. Ask anything about RBI rules, banking policies, loans, or compliance documents.",
+      confidence: 1,
+      sources: [],
+    },
+  ]);
+
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
 
   const bottomRef = useRef(null);
 
+  // 🔥 Auto-scroll
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+    bottomRef.current?.scrollIntoView({
+      behavior: "smooth",
+    });
   }, [messages]);
 
+  // 🔥 Send Message
   const sendMessage = async () => {
-    if (!input.trim()) return;
+    if (!input.trim() || loading) return;
 
-    const userMsg = { role: "user", text: input };
+    const query = input;
+
+    const userMsg = {
+      role: "user",
+      text: query,
+    };
+
     setMessages((prev) => [...prev, userMsg]);
+
+    setInput("");
     setLoading(true);
 
     try {
-      let data;
-
-      if (DEMO_MODE) {
-        data = {
-          answer:
-            "As per RBI guidelines, interest rates must be clearly disclosed for all loan products.",
-          sources: [
-            { doc: "rbi_guidelines.pdf", confidence: 0.92 },
-            { doc: "loan_policy.docx", confidence: 0.88 },
-            { doc: "bank_rules.txt", confidence: 0.83 },
-          ],
-          confidence: 0.89,
-        };
-        await new Promise((r) => setTimeout(r, 900));
-      } else {
-        const res = await axios.post("http://localhost:8000/query", null, {
-          params: { query: input },
-        });
-        data = res.data;
-      }
+      // 🔥 REAL BACKEND CALL
+      const data = await askQuestion(query);
 
       const botMsg = {
         role: "bot",
-        text: data.answer,
-        sources: data.sources,
-        confidence: data.confidence,
+        text: data.answer || "No response generated.",
+        sources: data.sources || [],
+        confidence: data.confidence || 0,
       };
 
       setMessages((prev) => [...prev, botMsg]);
-    } catch {
+    } catch (error) {
+      console.error(error);
+
+      let errorMessage = "⚠️ Backend unavailable.";
+
+      if (error.code === "ECONNABORTED") {
+        errorMessage = "⚠️ Request timeout.";
+      }
+
       setMessages((prev) => [
         ...prev,
-        { role: "bot", text: "⚠️ Error fetching response" },
+        {
+          role: "bot",
+          text: errorMessage,
+          confidence: 0,
+          sources: [],
+        },
       ]);
     }
 
     setLoading(false);
-    setInput("");
+  };
+
+  // 🔥 Clear Chat
+  const clearChat = () => {
+    setMessages([
+      {
+        role: "bot",
+        text: "👋 Chat cleared. Ask a new banking question.",
+        confidence: 1,
+        sources: [],
+      },
+    ]);
+  };
+
+  // 🔥 Confidence Color
+  const getConfidenceColor = (confidence) => {
+    if (confidence >= 0.8) return "bg-green-500";
+    if (confidence >= 0.5) return "bg-yellow-500";
+
+    return "bg-red-500";
   };
 
   return (
     <div className="flex h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-black text-white">
 
       {/* Sidebar */}
-      <div className="hidden md:block w-72 bg-white/5 backdrop-blur-lg border-r border-white/10 p-4 overflow-y-auto">
-        <h2 className="text-lg font-semibold mb-4">DeepDoc AI</h2>
+      <div className="hidden md:flex md:w-72 flex-col bg-white/5 backdrop-blur-lg border-r border-white/10 p-4 overflow-y-auto">
 
-        {messages
-          .filter((m) => m.role === "user")
-          .map((m, i) => (
-            <div
-              key={i}
-              className="p-2 rounded-lg bg-white/5 hover:bg-white/10 cursor-pointer transition"
-            >
-              {m.text.slice(0, 30)}...
-            </div>
-          ))}
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-lg font-semibold">
+            DeepDoc AI
+          </h2>
+
+          <button
+            onClick={clearChat}
+            className="text-xs bg-red-500/20 hover:bg-red-500/30 px-2 py-1 rounded"
+          >
+            Clear
+          </button>
+        </div>
+
+        <div className="space-y-2">
+          {messages
+            .filter((m) => m.role === "user")
+            .map((m, i) => (
+              <div
+                key={i}
+                className="p-2 rounded-lg bg-white/5 hover:bg-white/10 cursor-pointer transition text-sm"
+              >
+                {m.text.slice(0, 40)}...
+              </div>
+            ))}
+        </div>
       </div>
 
       {/* Chat Section */}
@@ -95,25 +143,17 @@ export default function Chat() {
 
         {/* Header */}
         <div className="px-4 py-3 border-b border-white/10 flex justify-between bg-black/30 backdrop-blur">
-          <h1 className="font-semibold">DeepDoc AI</h1>
-          <span className="text-xs opacity-70">RAG • Sources • Confidence</span>
+          <h1 className="font-semibold text-lg">
+            Banking RAG Assistant
+          </h1>
+
+          <span className="text-xs opacity-70">
+            FAISS • Ollama • RAG
+          </span>
         </div>
 
         {/* Messages */}
         <div className="flex-1 overflow-y-auto p-4 space-y-4">
-
-          {messages.length === 0 && (
-            <div className="h-full flex items-center justify-center text-center opacity-70">
-              <div>
-                <p className="text-lg mb-2">
-                  Ask questions about your documents
-                </p>
-                <p className="text-sm">
-                  Upload files and start querying instantly.
-                </p>
-              </div>
-            </div>
-          )}
 
           {messages.map((msg, i) => (
             <motion.div
@@ -121,51 +161,75 @@ export default function Chat() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               className={`flex ${
-                msg.role === "user" ? "justify-end" : "justify-start"
+                msg.role === "user"
+                  ? "justify-end"
+                  : "justify-start"
               }`}
             >
               <div
-                className={`px-4 py-3 rounded-2xl max-w-xl ${
+                className={`px-4 py-3 rounded-2xl shadow-lg max-w-2xl ${
                   msg.role === "user"
                     ? "bg-blue-600"
-                    : "bg-white/10 backdrop-blur"
+                    : "bg-white/10 backdrop-blur border border-white/10"
                 }`}
               >
+                {/* Text */}
                 <p
+                  className="leading-relaxed"
                   dangerouslySetInnerHTML={{
                     __html: highlightText(msg.text),
                   }}
                 />
 
                 {/* Sources */}
-                {msg.sources && (
-                  <div className="mt-3 space-y-2">
+                {msg.sources?.length > 0 && (
+                  <div className="mt-4 space-y-2">
+
+                    <p className="text-xs opacity-70 uppercase tracking-wide">
+                      Top Sources
+                    </p>
+
                     {msg.sources.map((s, idx) => (
                       <div
                         key={idx}
-                        className="bg-white/5 p-2 rounded-lg text-xs flex justify-between"
+                        className="bg-black/20 border border-white/10 p-2 rounded-lg text-xs"
                       >
-                        <span>📄 {s.doc}</span>
-                        <span className="text-green-400">
-                          {Math.round(s.confidence * 100)}%
-                        </span>
+                        <div className="flex justify-between">
+                          <span>
+                            📄 {s.document || s.doc}
+                          </span>
+
+                          <span className="text-blue-300">
+                            Page {s.page || "-"}
+                          </span>
+                        </div>
                       </div>
                     ))}
                   </div>
                 )}
 
                 {/* Confidence */}
-                {msg.confidence && (
-                  <div className="mt-3">
-                    <div className="h-2 bg-white/10 rounded">
+                {msg.role === "bot" && (
+                  <div className="mt-4">
+
+                    <div className="flex justify-between text-xs mb-1">
+                      <span>Confidence</span>
+
+                      <span>
+                        {Math.round(msg.confidence * 100)}%
+                      </span>
+                    </div>
+
+                    <div className="h-2 bg-white/10 rounded-full overflow-hidden">
                       <div
-                        className="h-2 bg-green-500 rounded"
-                        style={{ width: `${msg.confidence * 100}%` }}
+                        className={`h-2 rounded-full ${getConfidenceColor(
+                          msg.confidence
+                        )}`}
+                        style={{
+                          width: `${msg.confidence * 100}%`,
+                        }}
                       />
                     </div>
-                    <p className="text-xs mt-1 text-green-400">
-                      {Math.round(msg.confidence * 100)}% confidence
-                    </p>
                   </div>
                 )}
               </div>
@@ -174,8 +238,10 @@ export default function Chat() {
 
           {/* Loading */}
           {loading && (
-            <div className="flex gap-2 items-center text-sm opacity-70">
-              DeepDoc is thinking
+            <div className="flex items-center gap-2 text-sm opacity-70">
+
+              <span>DeepDoc AI is thinking</span>
+
               <div className="flex gap-1">
                 <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"></div>
                 <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce delay-150"></div>
@@ -189,19 +255,23 @@ export default function Chat() {
 
         {/* Input */}
         <div className="p-4 flex gap-2 bg-black/30 backdrop-blur border-t border-white/10">
+
           <input
-            className="flex-1 p-3 rounded-xl bg-white/10 outline-none"
-            placeholder="Ask anything..."
+            className="flex-1 p-3 rounded-xl bg-white/10 outline-none border border-white/10 focus:border-blue-500"
+            placeholder="Ask about RBI rules, loans, compliance..."
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && sendMessage()}
+            onKeyDown={(e) =>
+              e.key === "Enter" && sendMessage()
+            }
           />
+
           <button
             onClick={sendMessage}
-            className="bg-blue-600 px-6 rounded-xl hover:bg-blue-700"
-            disabled={!input.trim()}
+            disabled={!input.trim() || loading}
+            className="bg-blue-600 px-6 rounded-xl hover:bg-blue-700 disabled:opacity-50 transition"
           >
-            Send
+            {loading ? "..." : "Send"}
           </button>
         </div>
       </div>

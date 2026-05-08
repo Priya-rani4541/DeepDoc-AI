@@ -1,0 +1,228 @@
+[
+    {
+        "query": "What is RBI?",
+        "response": {
+            "answer": "Information not found in retrieved documents.",
+            "sources": [],
+            "confidence": 0.0
+        },
+        "timestamp": "2026-05-08 01:19:45.467658"
+    },
+    {
+        "query": "what is rbi rules",
+        "response": {
+            "answer": "The RBI Compliance Policy for Lending All Lenders must disclose interest rates clearly, no hidden charges are allowed, borrowers must be informed about total cost of loan, processing fees, and penalties, customer consent is mandatory before loan approval, all lending operations must follow RBI transparency norms, NRI on return to India can convert FCNR(B) accounts into RFC accounts/resident rupee accounts, premature withdrawal of deposits will result in payment of interest and penalty, resident foreign currency accounts are prohibited, and exemptions include prohibitions on prohibitions and exemptions.",
+            "sources": [
+                {
+                    "document": "rbi_compliance_policy.txt",
+                    "page": 1
+                },
+                {
+                    "document": "RBI interest rate guidelines.pdf",
+                    "page": 3
+                }
+            ],
+            "confidence": 0.12
+        },
+        "timestamp": "2026-05-08 05:07:29.594187"
+    },
+    {
+        "query": "what is eligibility criteria for Blostem personal loan?",
+        "response": {
+            "answer": "The given context mentions that the Blosteam Personal Loan Product has a specific interest rate of 10% - 14%, a loan amount ranging from \u20b950,000 to \u20b910,00,000, tenure ranging from 12 to 60 months, and eligibility criteria that require the applicant to be between the ages of 21 and 60 with a minimum monthly salary of \u20b925,000 and valid KYC documents. The question asked is: What are the eligiability criteria for Blosteam Personal Loan?",
+            "sources": [
+                {
+                    "document": "blostem_loan_product.txt",
+                    "page": 1
+                }
+            ],
+            "confidence": 0.49
+        },
+        "timestamp": "2026-05-08 05:11:35.697374"
+    },
+    {
+        "query": "are any hidden charges allowed in loans",
+        "response": {
+            "answer": "Information not found in retrieved documents.",
+            "sources": [],
+            "confidence": 0.0
+        },
+        "timestamp": "2026-05-08 05:12:28.478836"
+    },
+    {
+        "query": "Are hidden charges allowed in loans?",
+        "response": {
+            "answer": "Information not found in retrieved documents.",
+            "sources": [],
+            "confidence": 0.0
+        },
+        "timestamp": "2026-05-08 05:13:13.227510"
+    },
+    {
+        "query": "Explain blockchain metaverse quantum AI in RBI banking.",
+        "response": {
+            "answer": "Information not found in retrieved documents.",
+            "sources": [],
+            "confidence": 0.0
+        },
+        "timestamp": "2026-05-08 05:14:37.397606"
+    },
+    {
+        "query": "are any hidden charges allowed in loans",
+        "response": {
+            "answer": "Information not found in retrieved documents.",
+            "sources": [],
+            "confidence": 0.0
+        },
+        "timestamp": "2026-05-08 05:14:48.812979"
+    },
+    {
+        "query": "what is eligibility criteria for Blostem personal loan?",
+        "response": {
+            "answer": "The given context mentions that the Blosteam Personal Loan Product has a specific interest rate of 10% - 14%, a loan amount ranging from \u20b950,000 to \u20b910,00,000, tenure ranging from 12 to 60 months, and eligibility criteria that require the applicant to be between the ages of 21 and 60 with a minimum monthly salary of \u20b925,000 and valid KYC documents. The question asked is: What are the eligiability criteria for Blosteam Personal Loan?",
+            "sources": [
+                {
+                    "document": "blostem_loan_product.txt",
+                    "page": 1
+                }
+            ],
+            "confidence": 0.49
+        },
+        "timestamp": "2026-05-08 05:15:09.114341"
+    },
+    {
+        "query": "what is RBI rules?",
+        "response": {
+            "answer": "RBI (Reserve Bank of India) rules are guidelines or instructions issued by the central bank to banks and other financial institutions in India. They provide a framework for how banks should operate, including policies on interest rates, reserve requirements, capital adequacy, and other regulatory issues. The RBI Compliance Policy for Lending All Lenders must disclose interest rates clearly is one of the rules mentioned in the context.",
+            "sources": [
+                {
+                    "document": "rbi_compliance_policy.txt",
+                    "page": 1
+                },
+                {
+                    "document": "RBI interest rate guidelines.pdf",
+                    "page": 3
+                },
+                {
+                    "document": "RBI interest rate guidelines.pdf",
+                    "page": 3
+                }
+            ],
+            "confidence": 0.09
+        },
+        "timestamp": "2026-05-08 05:15:47.577323"
+    },
+    {
+        "query": "what is rbi rules?",
+        "response": {
+            "answer": "RBI (Reserve Bank of India) rules are guidelines or instructions issued by the central bank to banks and other financial institutions in India. They provide a framework for how banks should operate, including policies on interest rates, reserve requirements, capital adequacy, and other regulatory matters. The RBI Compliance Policy for Lending All Lenders must disclose interest rates clearly is one of the rules mentioned in the context.",
+            "sources": [
+                {
+                    "document": "rbi_compliance_policy.txt",
+                    "page": 1
+                },
+                {
+                    "document": "RBI interest rate guidelines.pdf",
+                    "page": 3
+                },
+                {
+                    "document": "RBI interest rate guidelines.pdf",
+                    "page": 3
+                }
+            ],
+            "confidence": 0.09
+        },
+        "timestamp": "2026-05-08 19:46:02.798202"
+    },
+    {
+        "query": "Are hidden  charges allowed in loan?",
+        "response": {
+            "answer": "Answer: No, hidden charge(s) are not allowed in loan. Borrowers must be informed about all costs and fees before loan approval. The RBI Compliance Policy for Lending All Lenders Must Disclose Interest Rates Clearly does not allow any hidden charges.",
+            "sources": [
+                {
+                    "document": "rbi_compliance_policy.txt",
+                    "page": 1
+                }
+            ],
+            "confidence": 0.02
+        },
+        "timestamp": "2026-05-08 19:47:37.369614"
+    },
+    {
+        "query": "what is the eligibilty criteria for blostem personal loan",
+        "response": {
+            "answer": "The eligibility criteria for Blosteem Personal Loan are as follows:\n\n1. Age between 21 and 60\n2. Minimum monthly salary of \u20b925,000\n3. Valid KYC documents required (Proof of Identity, Proof of Address, and Proof of Employment)\n4. Processing fee of 1.5% of loan amount\n5. Partners must ensure accurate loan information and proper customer data handling\n6. Failure to meet these criteria will lead to termination of partnership with Blosteem.",
+            "sources": [
+                {
+                    "document": "blostem_loan_product.txt",
+                    "page": 1
+                },
+                {
+                    "document": "partner_agreement.txt",
+                    "page": 1
+                }
+            ],
+            "confidence": 0.25
+        },
+        "timestamp": "2026-05-08 19:49:28.728345"
+    },
+    {
+        "query": "who is elon musk",
+        "response": {
+            "answer": "Information not found in retrieved documents.",
+            "sources": [],
+            "confidence": 0.0
+        },
+        "timestamp": "2026-05-08 19:49:53.121033"
+    },
+    {
+        "query": "rbi rules",
+        "response": {
+            "answer": "Yes, you can use the provided context to answer the question based on the given material. The information in the context is sufficient for answering the question. If there's no external knowledge available, you can only reply with \"information not found in retrieved documents.\"",
+            "sources": [
+                {
+                    "document": "RBI interest rate guidelines.pdf",
+                    "page": 3
+                },
+                {
+                    "document": "rbi_compliance_policy.txt",
+                    "page": 1
+                }
+            ],
+            "confidence": 0.04
+        },
+        "timestamp": "2026-05-08 19:50:13.347699"
+    },
+    {
+        "query": "i am 28 ys old and i want loan fron sbi what is the criteria for me to get personal loan",
+        "response": {
+            "answer": "Sure, here's a possible answer based on the provided context:\n\nQuestion:\nI am 28 years old and I want a personal loan from SBI. What are the criteria for getting this loan?\n\nAnswer:\nAccording to the given context, the specifications of the Blostem Personal Loan Product mentioned in the question include interest rates ranging from 10% - 14% per year, loan amounts ranging from \u20b950,000 to \u20b910,00,000, tenure ranges from 12 to 60 months, eligibility criteria including age between 21 and 60, KYC documents required, processing fee of 1.5% of loan amount, prepayment allowed after 6 months with a penalty of 2%.",
+            "sources": [
+                {
+                    "document": "blostem_loan_product.txt",
+                    "page": 1
+                }
+            ],
+            "confidence": 0.2
+        },
+        "timestamp": "2026-05-08 19:51:37.163026"
+    },
+    {
+        "query": "what is rbi rules",
+        "response": {
+            "answer": "The RBI Compliance Policy for Lending All Lenders must disclose interest rates clearly, no hidden charges are allowed, borrowers must be informed about total cost of loan, processing fees, and penalties, customer consent is mandatory before loan approval, all lending operations must follow RBI transparency norms, NRI on return to India can convert FCNR(B) accounts into RFC accounts/resident rupee accounts, premature withdrawal of deposits will result in payment of interest and penalty, resident foreign currency accounts are prohibited, and exemptions include prohibitions on prohibitions and exemptions.",
+            "sources": [
+                {
+                    "document": "rbi_compliance_policy.txt",
+                    "page": 1
+                },
+                {
+                    "document": "RBI interest rate guidelines.pdf",
+                    "page": 3
+                }
+            ],
+            "confidence": 0.12
+        },
+        "timestamp": "2026-05-08 19:52:13.463917"
+    }
+]

@@ -1,7 +1,20 @@
 import axios from "axios";
 
-export const askQuestion = (query) => {
-  return axios.post("http://localhost:8000/query", null, {
-    params: { query },
-  });
+const API = axios.create({
+  baseURL: "http://127.0.0.1:8000",
+  timeout: 10000,
+});
+
+export const askQuestion = async (query) => {
+  try {
+    const response = await API.post("/ask", {
+      query: query,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.error("API Error:", error);
+
+    throw error;
+  }
 };
