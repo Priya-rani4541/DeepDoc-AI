@@ -224,5 +224,209 @@
             "confidence": 0.12
         },
         "timestamp": "2026-05-08 19:52:13.463917"
+    },
+    {
+        "query": "RBI banking guideline PDF",
+        "response": {
+            "answer": "In response to the question \"What is the RBI banking guideline PDF?\"\n\nThe provided context states that the RBI banking guideline PDF is a set of directives provided by the Reserve Bank of India (RBI) for banks to follow when formulating policies on interest rates on deposits. The Directions provide a framework for banks to calculate and implement interest rates on deposits, as well as guidelines for cooperative banks on their interest rate policies. The PDF is available on the RBI's official website, and it can be accessed by clicking on the link provided in the context.",
+            "sources": [
+                {
+                    "document": "RBI interest rate guidelines.pdf",
+                    "page": 4
+                },
+                {
+                    "document": "RBI interest rate guidelines.pdf",
+                    "page": 27
+                },
+                {
+                    "document": "RBI interest rate guidelines.pdf",
+                    "page": 1
+                }
+            ],
+            "confidence": 0.29
+        },
+        "timestamp": "2026-05-08 21:08:53.633445"
+    },
+    {
+        "query": "What is the minimum tenor for domestic term deposits?",
+        "response": {
+            "answer": "The minimum tenor for domestic term deposits offered by different banks is as follows:\n\n1. Bank of India: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n2. State Bank of India: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n3. HDFC Bank: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n4. ICICI Bank: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n5. Axis Bank: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n6. SBI: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n7. Canara Bank: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n8. IDBI Bank: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.",
+            "sources": [
+                {
+                    "document": "RBI interest rate guidelines.pdf",
+                    "page": 13
+                },
+                {
+                    "document": "RBI interest rate guidelines.pdf",
+                    "page": 10
+                },
+                {
+                    "document": "RBI interest rate guidelines.pdf",
+                    "page": 15
+                }
+            ],
+            "confidence": 0.22
+        },
+        "timestamp": "2026-05-08 21:09:24.490496"
+    },
+    {
+        "query": "What is the minimum tenor for domestic term deposits?",
+        "response": {
+            "answer": "The minimum tenor for domestic term deposits offered by different banks is as follows:\n\n1. Bank of India: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n2. State Bank of India: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n3. HDFC Bank: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n4. ICICI Bank: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n5. Axis Bank: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n6. SBI: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n7. Canara Bank: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n8. IDBI Bank: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.",
+            "sources": [
+                {
+                    "document": "RBI interest rate guidelines.pdf",
+                    "page": 13
+                },
+                {
+                    "document": "RBI interest rate guidelines.pdf",
+                    "page": 10
+                },
+                {
+                    "document": "RBI interest rate guidelines.pdf",
+                    "page": 15
+                }
+            ],
+            "confidence": 0.22
+        },
+        "timestamp": "2026-05-08 21:09:36.792454"
+    },
+    {
+        "query": "How is your system different from ChatGPT?",
+        "response": {
+            "answer": "Information not found in retrieved documents.",
+            "sources": [],
+            "confidence": 0.0
+        },
+        "timestamp": "2026-05-08 21:14:43.075954"
+    },
+    {
+        "query": "What is the minimum tenor for domestic term deposits?",
+        "response": {
+            "answer": "The minimum tenor for domestic term deposits offered by different banks is as follows:\n\n1. Bank of India: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n2. State Bank of India: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n3. HDFC Bank: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n4. ICICI Bank: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n5. Axis Bank: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n6. SBI: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n7. Canara Bank: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n8. IDBI Bank: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.",
+            "sources": [
+                {
+                    "document": "RBI interest rate guidelines.pdf",
+                    "page": 13
+                },
+                {
+                    "document": "RBI interest rate guidelines.pdf",
+                    "page": 10
+                },
+                {
+                    "document": "RBI interest rate guidelines.pdf",
+                    "page": 15
+                }
+            ],
+            "confidence": 0.22
+        },
+        "timestamp": "2026-05-08 21:35:19.051129"
+    },
+    {
+        "query": "What is the minimum tenor for domestic term deposits?",
+        "response": {
+            "answer": "The minimum tenor for domestic term deposits offered by different banks is as follows:\n\n1. Bank of India: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n2. State Bank of India: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n3. HDFC Bank: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n4. ICICI Bank: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n5. Axis Bank: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n6. SBI: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n7. Canara Bank: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n8. IDBI Bank: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.",
+            "sources": [
+                {
+                    "document": "RBI interest rate guidelines.pdf",
+                    "page": 13
+                },
+                {
+                    "document": "RBI interest rate guidelines.pdf",
+                    "page": 10
+                },
+                {
+                    "document": "RBI interest rate guidelines.pdf",
+                    "page": 15
+                }
+            ],
+            "confidence": 0.22
+        },
+        "timestamp": "2026-05-08 21:35:28.596780"
+    },
+    {
+        "query": "What is CRR?",
+        "response": {
+            "answer": "Information not found in retrieved documents.",
+            "sources": [],
+            "confidence": 0.0
+        },
+        "timestamp": "2026-05-08 21:43:37.713943"
+    },
+    {
+        "query": "What is the purpose of RBI?",
+        "response": {
+            "answer": "Information not found in retrieved documents.",
+            "sources": [],
+            "confidence": 0.0
+        },
+        "timestamp": "2026-05-08 21:43:53.545358"
+    },
+    {
+        "query": "What is the minimum tenor for domestic term deposits?",
+        "response": {
+            "answer": "The minimum tenor for domestic term deposits offered by different banks is as follows:\n\n1. Bank of India: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n2. State Bank of India: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n3. HDFC Bank: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n4. ICICI Bank: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n5. Axis Bank: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n6. SBI: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n7. Canara Bank: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n8. IDBI Bank: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.",
+            "sources": [
+                {
+                    "document": "RBI interest rate guidelines.pdf",
+                    "page": 13
+                },
+                {
+                    "document": "RBI interest rate guidelines.pdf",
+                    "page": 10
+                },
+                {
+                    "document": "RBI interest rate guidelines.pdf",
+                    "page": 15
+                }
+            ],
+            "confidence": 0.22
+        },
+        "timestamp": "2026-05-08 21:55:20.003166"
+    },
+    {
+        "query": "What is the minimum tenor for domestic term deposits?",
+        "response": {
+            "answer": "The minimum tenor for domestic term deposits offered by different banks is as follows:\n\n1. Bank of India: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n2. State Bank of India: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n3. HDFC Bank: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n4. ICICI Bank: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n5. Axis Bank: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n6. SBI: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n7. Canara Bank: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.\n\n8. IDBI Bank: Minimum tenor of NRDs shall be one year and that of NRE/NRO Ds shall be seven days.",
+            "sources": [
+                {
+                    "document": "RBI interest rate guidelines.pdf",
+                    "page": 13
+                },
+                {
+                    "document": "RBI interest rate guidelines.pdf",
+                    "page": 10
+                },
+                {
+                    "document": "RBI interest rate guidelines.pdf",
+                    "page": 15
+                }
+            ],
+            "confidence": 0.22
+        },
+        "timestamp": "2026-05-08 21:57:44.512966"
+    },
+    {
+        "query": "what is RBI",
+        "response": {
+            "answer": "Information not found in retrieved documents.",
+            "sources": [],
+            "confidence": 0.0
+        },
+        "timestamp": "2026-05-08 21:58:01.678426"
+    },
+    {
+        "query": "What is the eligibility criteria for Blostem personal loan?",
+        "response": {
+            "answer": "The given context mentions that Blosteam Personal Loan Product Specification Interest Rate: 10% - 14% Loan Amount: \u20b950,000 to \u20b910,00,000 Tenure: 12 to 60 months Eligibility Criteria: Age between 21 and 60 Minimum monthly salary of \u20b925,000 Valid KYC documents required Processing Fees: 1.5% of loan amount Prepayment allowed after 6 months with 2% penalty.",
+            "sources": [
+                {
+                    "document": "blostem_loan_product.txt",
+                    "page": 1
+                }
+            ],
+            "confidence": 0.51
+        },
+        "timestamp": "2026-05-08 21:58:54.638693"
     }
 ]
